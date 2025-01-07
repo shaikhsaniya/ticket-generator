@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet" />
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <!--form page-->
+      <div id="fm-container">
+        <div id="form-container">
+          <div id="logo-container">
+            <img src="assets/images/logo-mark.svg" alt="" id="logo-mark" />
+            <p class="logoword-style">Coding Conf</p>
+          </div>
+
+          <div id="headings">
+            <h1 class="heading">
+              Your Journey to Coding Conf 2025 Starts Here!
+            </h1>
+
+            <p class="sub-heading">
+              Secure your spot at next year's biggest coding conference.
+            </p>
+          </div>
+
+          <div id="input-container">
+            <!--Upload avatar container-->
+            <label class="custom-file-upload">
+              <span id="icon-container">
+                <img
+                  src="assets/images/icon-upload.svg"
+                  alt=""
+                  class="upload-icon" />
+              </span>
+
+              <span id="instruction" class="toHide"
+                >Drag and drop or click to upload</span
+              >
+              <input
+                type="file"
+                id="upload-avatar"
+                accept="image/png, image/jpg, image/jpeg"
+                class="inputs custom-file-input" />
+
+              <div class="hidden" id="buttons">
+                <button class="r-and-c" id="remove-image">Remove image</button>
+                <button class="r-and-c">Change image</button>
+              </div> </label
+            ><br />
+
+            <!--image preview container-->
+            <label class="preview-file-upload hidden" id="preview-container">
+              <span id="icon-container">
+                <img src="" alt="" class="upload-icon" id="preview-image" />
+              </span>
+
+              <input
+                type="file"
+                id="upload-avatar"
+                accept="image/*"
+                class="inputs custom-file-input"
+                style="display: none" /> </label
+            ><br />
+
+            <p id="ua-copy">
+              <img src="assets/images/icon-info.svg" alt="" />
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+
+            <!--full name input container-->
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" class="inputs" />
+            <p class="error-message hidden" id="fullname-error-message">
+              <img src="assets/images/icon-info.svg" alt="" />
+              Please enter your full name. (Note: Fullname cannot include
+              numbers.)
+            </p>
+
+            <!--email address input container-->
+            <label for="email-address">Email address</label>
+            <input
+              type="text"
+              id="email-address"
+              class="inputs"
+              placeholder="example@email.com" />
+            <p class="error-message hidden" id="email-error-message">
+              <img src="assets/images/icon-info.svg" alt="" />
+              Please enter a valid email address.
+            </p>
+
+            <!--github username input container-->
+            <label for="github-username">Github username</label>
+            <input
+              type="text"
+              id="github-username"
+              class="inputs"
+              placeholder="@yourusername" />
+            <p class="error-message hidden" id="githubusername-error-message">
+              <img src="assets/images/icon-info.svg" alt="" />
+              Your Github username is required
+            </p>
+
+            <button id="btn">Generate my ticket</button>
+          </div>
+        </div>
+      </div>
+
+      <!--ticket page-->
+      <div id="ticket-container">
+        <div id="ticket-page">
+          <div id="logo-container">
+            <img src="assets/images/logo-mark.svg" alt="" id="logo-mark" />
+            <p class="logoword-style">Coding Conf</p>
+          </div>
+
+          <h1 class="heading" id="h1-notification">
+            Congrats,
+            <!-- Full Name -->
+            Your ticket is ready.
+          </h1>
+
+          <p class="sub-heading" id="sub-heading-notification">
+            We've emailed your ticket to
+            <!-- Email Address -->
+            and will send updates in the run up to the event.
+          </p>
+
+          <div id="ticket-paper-container">
+            <img src="assets/images/pattern-ticket.svg" alt="" id="ticket" />
+
+            <div id="ticket-paper-content">
+              <p id="id-number">#01609</p>
+
+              <div id="line-1">
+                <img
+                  src="assets/images/logo-mark.svg"
+                  alt=""
+                  id="line-1-logomark" />
+                <span id="logoword-and-date">
+                  <p id="coding-conf">Coding Conf</p>
+                  <p class="l-and-d" id="date">Jan 31, 2025 / Austin, TX</p>
+                </span>
+              </div>
+
+              <div id="line-2">
+                <span id="image-and-username">
+                  <div id="image">
+                    <img
+                      src="assets/images/favicon-32x32.png"
+                      alt=""
+                      id="upload-icon" />
+                  </div>
+
+                  <div id="name-and-username-container">
+                    <p id="name">Jonathan Kristoff</p>
+                    <span id="github-and-username">
+                      <img src="assets/images/icon-github.svg" alt="" />
+                      <p id="username">@jonathanKristoff</p>
+                    </span>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
